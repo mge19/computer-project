@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+  body{
+    background-color:blue;
+  }
+  h1 {
+    color: white;
+	text-align:center;
+	font-family: verdana;
+	font-size:50px;
+  }
+    h2 {
+    color: green;
+	text-align:center;
+	font-family: verdana;
+	font-size:40px;
+  }
+  h3
+  { 
+    color: red;
+	text-align:center;
+	font-family: verdana;
+	font-size:30px;
+  }
+  input[type=submit] {
+    background-color: #2f806a;
+	color: yellow;
+  }
+  </style>
+   <title>
+     MailLAB Main Page
+   </title>
+  </head>
+  <body>
+    <h1> Welcome to the MailLAB! </h1>
+    <h2>It is a useful e-mail application for visually impaired people.</h2>
+    <h3>To log in, click "log in" button or say "log in". </h3>
+    <h3>To sign up, click "sign up" button or press "sign up".</h3>
+    <form>
+		<input type="submit" formaction="http://localhost:5000/login" value="Log in">
+		<input type="submit" formaction="http://localhost:5000/signup" value="Sign Up">
+	</form>
+  </body>
+</html>

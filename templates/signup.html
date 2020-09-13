@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <style>
+  body{
+    background-color:blue;
+  }
+  h1 {
+    color: white;
+	text-align:center;
+	font-family: verdana;
+	font-size:50px;
+  }
+    p {
+    color: green;
+	text-align:left;
+	font-family: verdana;
+	font-size:15px;
+  }
+  input[type=submit] {
+    background-color: #2f806a;
+	color: yellow;
+  }
+  input[type=text]:focus {
+    border: 4px solid #235;
+  }  
+  </style>
+   <title>
+     Sign Up
+   </title>
+  </head>
+  <body>
+	<h1> Sign Up</h1>
+    <form method="get" id="signup">Name: <input type="text" name="name"><br>
+	Surname: <input type="text" name="surname"><br>
+    Username: <input type="text" name="username"><br>
+    Password:  <input type="text" name="password"><br>
+    <input type="submit" value="Sign up">
+	{% if request.args.get('name')=="" or request.args.get('surname')=="" or request.args.get('username')=="" or request.args.get('password')==""%}
+	<p>Error! All of these blanks must be filled.</p>
+	{% elif x!=0 and request.args.get('name')!=None and request.args.get('surname')!=None and request.args.get('username')!=None and request.args.get('password')!=None %}
+	<p> Error! This username is already taken.</p>
+	{% endif %}
+    </form> 
+  </body>
+</html>
